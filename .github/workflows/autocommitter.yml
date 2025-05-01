@@ -2,7 +2,7 @@ name: AutoCommitter
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Run every 5 minutes (adjust for testing)
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
       run: python update_readme.py
 
     - name: Debug cron trigger time
-      run: echo "This is a cron triggered run at $(date)"  # Debugging step
+      run: echo "This is a cron triggered run at $(date)"
 
     - name: Commit and push changes
       env:
