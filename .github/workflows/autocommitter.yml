@@ -2,7 +2,7 @@ name: AutoCommitter
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/5 * * * *'  # Run every 5 minutes (adjust for testing)
   workflow_dispatch:
 
 jobs:
@@ -24,9 +24,12 @@ jobs:
     - name: Run script to update README
       run: python update_readme.py
 
+    - name: Debug cron trigger time
+      run: echo "This is a cron triggered run at $(date)"  # Debugging step
+
     - name: Commit and push changes
       env:
-        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # Use the secret PAT_TOKEN here
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -34,4 +37,3 @@ jobs:
         git add README.md .counter
         git commit -m "Automated update via GitHub Actions" || echo "No changes to commit"
         git push
-
