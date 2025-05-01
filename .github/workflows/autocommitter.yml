@@ -25,9 +25,13 @@ jobs:
       run: python update_readme.py
 
     - name: Commit and push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # Use the secret PAT_TOKEN here
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
         git add README.md .counter
         git commit -m "Automated update via GitHub Actions" || echo "No changes to commit"
         git push
+
