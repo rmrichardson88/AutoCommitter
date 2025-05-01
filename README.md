@@ -1,2 +1,1 @@
-# AutoCommitter
-This is an on-the-nose script to show why you should do more than care about raw Github commits.
+I wrote a cheeky script that automatically contributes to my Github to illustrate why more than commits matter. This is the 1 time this script has run.
