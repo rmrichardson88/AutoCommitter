@@ -1,1 +1,1 @@
-I wrote a cheeky script that automatically contributes to my Github to illustrate why more than commits matter. This is the 2 time this script has run.
+I wrote a cheeky script that contributes to my Github by updating this ReadMe to illustrate why more than commits matter. This script has run 3 times.
