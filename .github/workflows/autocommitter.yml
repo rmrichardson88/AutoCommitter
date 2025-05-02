@@ -31,8 +31,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "rmrichardson88"
+        git config --global user.email "ryanmarkrichardson@gmail.com"
         git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
         git add README.md .counter
         git commit -m "Automated update via GitHub Actions" || echo "No changes to commit"
