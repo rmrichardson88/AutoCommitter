@@ -1,1 +1,1 @@
-I wrote a cheeky script that contributes to my Github by updating this ReadMe to illustrate why more than commits matter. This script has run 6250 times.
+I wrote a cheeky script that contributes to my Github by updating this ReadMe to illustrate why more than commits matter. This script has run 6251 times.
